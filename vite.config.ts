@@ -3,7 +3,7 @@ import { resolve } from 'node:path'
 import { defineConfig, type Plugin } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 
-const WEEKS_DIR = resolve(__dirname, 'src/data/weeks')
+const WEEKS_DIR = resolve(import.meta.dirname, 'src/data/weeks')
 
 /** Importerar bara de Phosphor-ikoner som veckofilerna använder. */
 function wordIcons(): Plugin {
