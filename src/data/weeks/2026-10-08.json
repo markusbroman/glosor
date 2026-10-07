@@ -1,0 +1,48 @@
+{
+  "title": "Kapitel 3",
+  "due": "2026-10-08",
+  "words": [
+    {
+      "sv": "stegvis",
+      "en": "step by step",
+      "icon": "Stairs",
+      "example": { "en": "We built the treehouse step by step.", "sv": "Vi byggde trädkojan stegvis." }
+    },
+    {
+      "sv": "för det första",
+      "en": "first",
+      "icon": "NumberCircleOne",
+      "example": { "en": "First, wash your hands.", "sv": "För det första, tvätta händerna." }
+    },
+    {
+      "sv": "för det andra",
+      "en": "second",
+      "icon": "NumberCircleTwo",
+      "example": { "en": "Second, put the flour in a bowl.", "sv": "För det andra, häll mjölet i en skål." }
+    },
+    {
+      "sv": "därefter",
+      "en": "then",
+      "icon": "ArrowBendDownRight",
+      "example": { "en": "Mix the eggs, then add the milk.", "sv": "Blanda äggen, därefter tillsätter du mjölken." }
+    },
+    {
+      "sv": "sedan",
+      "en": "next",
+      "icon": "SkipForward",
+      "example": { "en": "Next, bake the cake for thirty minutes.", "sv": "Sedan gräddar du kakan i trettio minuter." }
+    },
+    {
+      "sv": "en lista med vad du behöver",
+      "en": "a list of what you need",
+      "icon": "ListChecks",
+      "example": { "en": "Write a list of what you need before you go shopping.", "sv": "Skriv en lista med vad du behöver innan du handlar." }
+    },
+    {
+      "sv": "beroende på",
+      "en": "depending on",
+      "icon": "CloudSun",
+      "example": { "en": "We can play outside, depending on the weather.", "sv": "Vi kan leka ute, beroende på vädret." }
+    }
+  ]
+}
