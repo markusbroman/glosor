@@ -1,0 +1,66 @@
+{
+  "title": "Kapitel 4",
+  "due": "2026-10-15",
+  "words": [
+    {
+      "sv": "en ö",
+      "en": "an island",
+      "icon": "Island",
+      "example": { "en": "We had a picnic on an island in the lake.", "sv": "Vi hade picknick på en ö i sjön." }
+    },
+    {
+      "sv": "intill, nära",
+      "en": "near",
+      "icon": "ArrowsIn",
+      "example": { "en": "My best friend lives near the school.", "sv": "Min bästa kompis bor nära skolan." }
+    },
+    {
+      "sv": "bon",
+      "en": "nest",
+      "icon": "Bird",
+      "example": { "en": "The bird built a nest in our tree.", "sv": "Fågeln byggde ett bo i vårt träd." }
+    },
+    {
+      "sv": "del av",
+      "en": "part of",
+      "icon": "PuzzlePiece",
+      "example": { "en": "Music is part of my day.", "sv": "Musik är en del av min dag." }
+    },
+    {
+      "sv": "kläckas",
+      "en": "hatch",
+      "icon": "EggCrack",
+      "example": { "en": "The baby turtles hatch in the warm sand.", "sv": "Sköldpaddsungarna kläcks i den varma sanden." }
+    },
+    {
+      "sv": "havssköldpadda",
+      "en": "sea turtle",
+      "icon": "Waves",
+      "example": { "en": "We saw a sea turtle when we were snorkelling.", "sv": "Vi såg en havssköldpadda när vi snorklade." }
+    },
+    {
+      "sv": "hotade",
+      "en": "endangered",
+      "icon": "Warning",
+      "example": { "en": "Tigers are endangered animals.", "sv": "Tigrar är hotade djur." }
+    },
+    {
+      "sv": "föddes",
+      "en": "were born",
+      "icon": "Baby",
+      "example": { "en": "The puppies were born last night.", "sv": "Valparna föddes i går kväll." }
+    },
+    {
+      "sv": "lägger",
+      "en": "lay",
+      "icon": "Egg",
+      "example": { "en": "Our hens lay eggs every morning.", "sv": "Våra hönor lägger ägg varje morgon." }
+    },
+    {
+      "sv": "gräver",
+      "en": "dig",
+      "icon": "Shovel",
+      "example": { "en": "Dogs love to dig in the garden.", "sv": "Hundar älskar att gräva i trädgården." }
+    }
+  ]
+}
