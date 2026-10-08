@@ -9,6 +9,8 @@ export interface Word {
   /** Phosphor-ikonens namn utan "Icon", t.ex. "Stairs". */
   icon?: string
   example?: Example
+  /** Anteckning för vuxna när översättningen är tveksam, t.ex. plural mot singular. */
+  note?: string
 }
 
 export interface Week {
