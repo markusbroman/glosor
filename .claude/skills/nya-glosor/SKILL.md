@@ -34,7 +34,10 @@ Visa en tabell (svenska | engelska | ikon | exempelmening) och vänta på ok inn
   ]
 }
 ```
-1. Skriv `src/data/weeks/<due>.json`.
-2. `npm test && npm run check && npm run build`. Testerna kontrollerar att datumet är en torsdag, att ikonerna finns och att exempelmeningarna innehåller ordet.
-3. Commit, t.ex. `Lägg till glosor för <title> (<due>).`, och `git push`.
-4. Följ bygget med `gh run watch`. När det är grönt finns orden på https://markusbroman.github.io/glosor/.
+1. Om `node_modules` saknas (t.ex. i en molnsession från mobilappen): kör `npm ci`.
+2. Skriv `src/data/weeks/<due>.json`. Ändra inga andra filer i samma commit.
+3. `npm test && npm run check && npm run build`. Testerna kontrollerar att datumet är en torsdag, att ikonerna finns och att exempelmeningarna innehåller ordet.
+4. Commit, t.ex. `Lägg till glosor för <title> (<due>).`, och pusha:
+   - **På `main`** (lokalt på datorn): `git push`. Flödet "Publicera" bygger sidan.
+   - **På en `claude/...`-gren** (molnsession från mobilen): pusha grenen. Flödet "Glosor från mobilen" kontrollerar att bara veckofiler ändrats, kör testerna, slår ihop till `main` och publicerar. Ingen pull request behövs.
+5. Om `gh` finns: följ körningen med `gh run watch`. Annars: berätta att orden är ute om cirka 2 minuter på https://markusbroman.github.io/glosor/.

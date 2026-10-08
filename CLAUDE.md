@@ -1,6 +1,6 @@
 # Glosspelet
 
-Glosövningsspel (svenska ↔ engelska) för en 11–12-åring. Live på https://markusbroman.github.io/glosor/ (repo `markusbroman/glosor`). Push till `main` bygger och publicerar via GitHub Actions.
+Glosövningsspel (svenska ↔ engelska) för en 11–12-åring. Live på https://markusbroman.github.io/glosor/ (repo `markusbroman/glosor`). Push till `main` bygger och publicerar via GitHub Actions. Push till en `claude/**`-gren som bara ändrar veckofiler slås ihop till `main` automatiskt (`.github/workflows/glosor-fran-mobilen.yml`), så att nya ord kan läggas in från Claude-appen på mobilen.
 
 ## Stack
 Vite + Svelte 5 (runes) + TypeScript, Vitest, `phosphor-svelte` för ikoner, Lexend som typsnitt. Ingen backend: framstegen ligger i `localStorage` (`glosor.progress`).
