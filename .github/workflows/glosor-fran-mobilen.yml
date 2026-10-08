@@ -1,0 +1,56 @@
+name: Glosor från mobilen
+
+# Claude i mobilappen pushar nya veckofiler till en claude/...-gren.
+# Ändrar grenen bara veckofiler och testerna går igenom slås den ihop till main och publiceras.
+
+on:
+  push:
+    branches: ['claude/**']
+    paths: ['src/data/weeks/**']
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: glosor-fran-mobilen
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Kontrollera att bara veckofiler ändrats
+        run: |
+          changed=$(git diff --name-only origin/main...HEAD)
+          echo "$changed"
+          if echo "$changed" | grep -qvE '^src/data/weeks/[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$'; then
+            echo "::error::Grenen ändrar mer än veckofiler. Slå ihop den manuellt."
+            exit 1
+          fi
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run check
+
+      - name: Slå ihop till main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout main
+          git merge --no-edit "$GITHUB_SHA"
+          git push origin main
+
+      - name: Publicera
+        env:
+          GH_TOKEN: ${{ github.token }}
+        # Pushar gjorda av github.token startar inga nya flöden, så publiceringen startas uttryckligen.
+        run: gh workflow run deploy.yml --ref main
