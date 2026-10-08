@@ -1,4 +1,5 @@
 <script lang="ts">
+  import CaretDown from 'phosphor-svelte/lib/CaretDownIcon'
   import Copy from 'phosphor-svelte/lib/CopyIcon'
   import { prettyDate } from '../lib/dates'
   import { emptyProgress, exportCode, importCode } from '../lib/progress'
@@ -16,6 +17,7 @@
 
   const ordered = [...weeks].sort((a, b) => b.due.localeCompare(a.due))
   const stat = (id: string) => store.progress.words[id]
+  const noted = ordered.map((w) => ({ week: w, words: w.words.filter((x) => x.note) })).filter((g) => g.words.length)
 
   async function copy() {
     const c = exportCode(store.progress)
@@ -88,6 +90,21 @@
   {#if message}<p class="msg" role="status">{message}</p>{/if}
 </section>
 
+{#if noted.length}
+  <details class="card notes">
+    <summary><span>Tveksamma översättningar</span><CaretDown size={20} weight="bold" /></summary>
+    <p>Ord där glospappret och engelskan inte riktigt stämmer överens. Bra att känna till om ett svar rättas oväntat.</p>
+    {#each noted as g}
+      <h3>{g.week.title} <span>· {prettyDate(g.week.due)}</span></h3>
+      <ul>
+        {#each g.words as x}
+          <li><strong>{x.sv}</strong> → <span lang="en">{x.en}</span><small>{x.note}</small></li>
+        {/each}
+      </ul>
+    {/each}
+  </details>
+{/if}
+
 <style>
   h2 {
     font-size: 18px;
@@ -157,6 +174,58 @@
     background: var(--surface-2);
     color: var(--ink);
     font: 14px ui-monospace, monospace;
+  }
+  .notes {
+    margin-top: 24px;
+    padding: 0 18px;
+    box-shadow: none;
+    font-size: 16px;
+  }
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 56px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary :global(svg) {
+    color: var(--mute);
+    transition: transform 0.2s var(--ease);
+  }
+  .notes[open] summary :global(svg) {
+    transform: rotate(180deg);
+  }
+  .notes[open] {
+    padding-bottom: 18px;
+  }
+  .notes > p {
+    color: var(--mute);
+  }
+  .notes h3 {
+    margin: 16px 0 6px;
+  }
+  .notes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .notes li {
+    padding: 8px 0;
+  }
+  .notes li + li {
+    border-top: 1px solid var(--line);
+  }
+  .notes small {
+    display: block;
+    margin-top: 2px;
+    color: var(--mute);
+    font-size: 15px;
   }
   .danger {
     color: var(--bad);

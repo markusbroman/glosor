@@ -18,7 +18,8 @@
       "sv": "bon",
       "en": "nest",
       "icon": "Bird",
-      "example": { "en": "The bird built a nest in our tree.", "sv": "Fågeln byggde ett bo i vårt träd." }
+      "example": { "en": "The bird built a nest in our tree.", "sv": "Fågeln byggde ett bo i vårt träd." },
+      "note": "\"Bon\" är plural (ett bo, flera bon), men \"nest\" är singular. Plural blir \"nests\"."
     },
     {
       "sv": "del av",
@@ -48,13 +49,15 @@
       "sv": "föddes",
       "en": "were born",
       "icon": "Baby",
-      "example": { "en": "The puppies were born last night.", "sv": "Valparna föddes i går kväll." }
+      "example": { "en": "The puppies were born last night.", "sv": "Valparna föddes i går kväll." },
+      "note": "\"Were born\" gäller flera. Om en enda heter det \"was born\", till exempel \"I was born in May\"."
     },
     {
       "sv": "lägger",
       "en": "lay",
       "icon": "Egg",
-      "example": { "en": "Our hens lay eggs every morning.", "sv": "Våra hönor lägger ägg varje morgon." }
+      "example": { "en": "Our hens lay eggs every morning.", "sv": "Våra hönor lägger ägg varje morgon." },
+      "note": "Med he, she eller it blir det \"lays\" (she lays eggs). \"Lay\" används om ägg; att lägga sig heter \"lie\"."
     },
     {
       "sv": "gräver",

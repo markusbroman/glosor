@@ -25,6 +25,9 @@ describe('veckofilerna', () => {
       it('har exempelmeningar som innehåller ordet', () => {
         for (const x of w.words) if (x.example) expect(makeCloze(x.example.en, x.en), x.en).not.toBeNull()
       })
+      it('har anteckningar som inte är tomma', () => {
+        for (const x of w.words) if ('note' in x) expect(typeof x.note === 'string' && x.note.trim(), x.en).toBeTruthy()
+      })
     })
   }
 })

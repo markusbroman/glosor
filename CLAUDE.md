@@ -7,6 +7,7 @@ Vite + Svelte 5 (runes) + TypeScript, Vitest, `phosphor-svelte` för ikoner, Lex
 
 ## Veckans ord
 - En fil per vecka: `src/data/weeks/<förhörsdatum>.json` (förhör = torsdag). Använd skillen `/nya-glosor` för att lägga till ord från ett foto.
+- Valfri `note` per ord: anteckning för vuxna om tveksamma översättningar. Visas hopfälld längst ned på sidan "För vuxna".
 - Ikoner: Phosphor-namn utan `Icon`-suffix. Pluginen `wordIcons` i `vite.config.ts` importerar bara de ikoner som används.
 
 ## Logik

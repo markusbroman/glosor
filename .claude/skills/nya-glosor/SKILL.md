@@ -21,8 +21,10 @@ Lägg in en ny veckolista i `src/data/weeks/` och publicera den. Läxförhöret 
 - `icon`: ett Phosphor-ikonnamn utan "Icon"-suffix som bildmässigt passar ordet. Kontrollera att `node_modules/phosphor-svelte/lib/<Namn>Icon.svelte` finns (`ls node_modules/phosphor-svelte/lib | grep -i <sökord>`). Hoppa över ikonen hellre än att välja en missvisande.
 - `example`: en kort, naturlig mening på engelska (max ca 10 ord) för en 11–12-åring, med vardagliga ämnen som skola, kompisar, sport, mat och djur. Meningen **måste innehålla glosan exakt** som den skrivs i `en` (stor bokstav i början är okej), och `sv` är en naturlig svensk översättning.
 
+- `note` (valfri): en kort anteckning för vuxna när översättningen på pappret är tveksam, t.ex. plural mot singular ("bon" → "nest"), fel tempus eller ett ord som böjs annorlunda. Ändra aldrig själva glosan, skriv hellre en anteckning. Visas hopfälld längst ned på sidan "För vuxna".
+
 ## 4. Visa och bekräfta
-Visa en tabell (svenska | engelska | ikon | exempelmening) och vänta på ok innan du skriver filen.
+Visa en tabell (svenska | engelska | ikon | exempelmening) och vänta på ok innan du skriver filen. Lista eventuella anteckningar under tabellen.
 
 ## 5. Skriv, testa, publicera
 ```json
@@ -30,7 +32,7 @@ Visa en tabell (svenska | engelska | ikon | exempelmening) och vänta på ok inn
   "title": "Kapitel 4",
   "due": "2026-10-15",
   "words": [
-    { "sv": "…", "en": "…", "icon": "…", "example": { "en": "…", "sv": "…" } }
+    { "sv": "…", "en": "…", "icon": "…", "example": { "en": "…", "sv": "…" }, "note": "…" }
   ]
 }
 ```
