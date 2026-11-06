@@ -1,0 +1,54 @@
+{
+  "title": "Vecka 46",
+  "due": "2026-11-12",
+  "words": [
+    {
+      "sv": "fantastiskt",
+      "en": "fantastic",
+      "icon": "Sparkle",
+      "example": { "en": "Your drawing is fantastic!", "sv": "Din teckning är fantastisk!" }
+    },
+    {
+      "sv": "härlig, vacker",
+      "en": "lovely",
+      "icon": "Heart",
+      "example": { "en": "What a lovely day for a picnic.", "sv": "Vilken härlig dag för en picknick." }
+    },
+    {
+      "sv": "valar",
+      "en": "whales",
+      "icon": "Waves",
+      "example": { "en": "We saw two whales from the boat.", "sv": "Vi såg två valar från båten." }
+    },
+    {
+      "sv": "delfiner",
+      "en": "dolphins",
+      "example": { "en": "Dolphins are very smart animals.", "sv": "Delfiner är väldigt smarta djur." }
+    },
+    {
+      "sv": "hoppade",
+      "en": "jumped",
+      "icon": "ArrowFatUp",
+      "example": { "en": "The cat jumped onto the table.", "sv": "Katten hoppade upp på bordet." }
+    },
+    {
+      "sv": "är det sant",
+      "en": "is it true?",
+      "icon": "Question",
+      "example": { "en": "Is it true? Are we getting a dog?", "sv": "Är det sant? Ska vi skaffa en hund?" }
+    },
+    {
+      "sv": "simfötter",
+      "en": "flippers",
+      "icon": "PersonSimpleSwim",
+      "example": { "en": "I wear flippers when I swim in the sea.", "sv": "Jag har simfötter när jag simmar i havet." },
+      "note": "\"Flippers\" betyder också fenorna på sälar och sköldpaddor. För dykutrustning är \"fins\" lika vanligt."
+    },
+    {
+      "sv": "vägde",
+      "en": "weighed",
+      "icon": "Scales",
+      "example": { "en": "The baby weighed four kilos.", "sv": "Bebisen vägde fyra kilo." }
+    }
+  ]
+}
